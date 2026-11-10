@@ -1,0 +1,16 @@
+DOTNOTE PER ANDROID - COME OTTENERE L'APK (senza installare nulla)
+
+1. Crea un account gratuito su github.com (se non l'hai già).
+2. In alto a destra: "+" > "New repository". Nome: dotnote. Lascia "Public" o scegli "Private", poi "Create repository".
+3. Nella pagina del nuovo repository clicca "uploading an existing file".
+4. Decomprimi lo zip, apri la cartella e trascina nella pagina TUTTO il contenuto (cartelle android, assets, www e i file sciolti). Attendi il caricamento e clicca "Commit changes".
+5. Controlla che esista il file .github/workflows/build.yml. Se non c'è (le cartelle col punto a volte non si trascinano):
+   "Add file" > "Create new file", nel nome scrivi:  .github/workflows/build.yml
+   incolla il contenuto del file build.yml.txt (è nello zip) e clicca "Commit changes".
+6. Vai nella scheda "Actions". Parte da solo "Build APK" (se non parte: Build APK > "Run workflow"). Dura circa 5-8 minuti; quando c'è la spunta verde, aprilo.
+7. In fondo alla pagina, sotto "Artifacts", scarica "Dotnote-APK": è uno zip con dentro app-debug.apk.
+8. Passa app-debug.apk al telefono (cavo, Drive, Telegram...). Aprilo e consenti "Installa app da questa fonte" quando richiesto.
+
+NOTE
+- Le note restano solo sul telefono (niente sincronizzazione con l'account Claude). Per spostarle usa Impostazioni > Esporta/Importa.
+- Se la compilazione mostra una X rossa, apri il passaggio fallito e mandami la scritta in rosso: la sistemo.
